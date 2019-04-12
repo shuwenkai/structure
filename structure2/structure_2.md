@@ -1,10 +1,10 @@
-##6.字典和散列表
+## 6.字典和散列表
 
 集合、字典、和散列表可以存储不重复的值。在集合中，以[值，值]的形式存储元素，我们感兴趣的是每个元素本身，并把它们当做
 
 主要元素。在字典和散列表中我们以[键名，值]的形式来存储数据。
 
-###6.1字典（Map类，他和Set类很相似）
+### 6.1字典（Map类，他和Set类很相似）
 
 ```js
 /*
@@ -99,7 +99,7 @@ console.log(dictionary.getItems());     //Object {Gandalf: "gandalf@email.com", 
 
 ```
 
-###6.2散列表（哈希表）
+### 6.2散列表（哈希表）
 
 HashTable类是Dictionary类的一种散列表实现方式。散列算法的作用是尽可能快地在数据结构中找到一个值。散列函数的作用是给定一个键值，然后返回值在表中的地址。
 
@@ -109,7 +109,7 @@ HashTable类是Dictionary类的一种散列表实现方式。散列算法的作�
 
 ![哈希](https://img-blog.csdn.net/20180808164815476?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIwOTAxMzk3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-####6.2.1 创建一个散列表：HashTable类
+#### 6.2.1 创建一个散列表：HashTable类
 
 ```js
 //基于数组进行设计
@@ -158,7 +158,7 @@ hash.remove('Gandalf');
 console.log(hash.get('Gandalf'));           //undefined
 ```
 
-####6.2.2 散列碰撞：
+#### 6.2.2 散列碰撞：
 
  不同的值在散列表中对应相同位置的时候，我们称这种情况为散列碰撞。若是不做处理，则后面的值会覆盖前面的值。解决散列碰撞的常用方法有：线性探测法（寻址法）、再哈希法、拉链法、建立一个公共溢出区。
 
@@ -373,7 +373,7 @@ hash.removeLL('Donnie');
 console.log(hash.getLL('Donnie'));          //undefined
 ```
 
-####6.2.3 性能： 
+#### 6.2.3 性能： 
 
 散列表性能受以下因素影响：
 
@@ -381,7 +381,7 @@ console.log(hash.getLL('Donnie'));          //undefined
 
 * **良好的散列函数：** 让数据中的值成均匀分布，尽量不要扎堆，使数据查找和删除时间复杂度为O(1)和O(n)。
 
-####6.2.4 HashTable类与HashMap的区别：
+#### 6.2.4 HashTable类与HashMap的区别：
 
 * **继承的父类不同：** Hashtable继承自Dictionary类，而HashMap继承自AbstractMap类。但二者都实现了Map接口。
 
